@@ -2,10 +2,16 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Department">
     
-    <test name="Car loan">
-        <packages>
-            <package name="test"></package>
-        </packages>
+    <test name="Personal loan">
+        <classes>
+            <class name="test.BasicTests">
+                <methods>
+                    <include name="demo"/>
+                </methods>
+            </class>
+            <class name="test.SecondClass"/>
+            <class name="test.ThirdClass"/>
+        </classes>
     </test>
     
 </suite>
