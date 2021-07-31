@@ -1,28 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Department">
-
-<!--
-    <test name="Personal loan">
-        <classes>
-            <class name="test.BasicTests">
-                <methods>
-                    <include name="secondTest"/>
-                </methods>
-            </class>
-            <class name="test.SecondClass"/>
-        </classes>
-    </test>
--->
     
     <test name="Car loan">
-        <classes>
-            <class name="test.ThirdClass">
-                <methods>
-                    <exclude name="mobile.*"/>
-                </methods>
-            </class>
-        </classes>
+        <packages>
+            <package name="test"></package>
+        </packages>
     </test>
     
 </suite>
