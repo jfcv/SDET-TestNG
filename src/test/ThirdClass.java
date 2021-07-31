@@ -15,6 +15,16 @@ public class ThirdClass {
     }
 
     @Test
+    public void mobileSignInHomeCarLoan() {
+        System.out.println("mobileSignIn");
+    }
+
+    @Test
+    public void mobileSignOutHomeCarLoan() {
+        System.out.println("mobileSignOut");
+    }
+
+    @Test
     public void apiLoginHomeCarLoan() {
         System.out.println("apiLoginHome");
     }

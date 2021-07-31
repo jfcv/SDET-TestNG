@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Loan Department">
 
-
+<!--
     <test name="Personal loan">
         <classes>
             <class name="test.BasicTests">
@@ -13,13 +13,13 @@
             <class name="test.SecondClass"/>
         </classes>
     </test>
-
+-->
     
     <test name="Car loan">
         <classes>
             <class name="test.ThirdClass">
                 <methods>
-                    <exclude name="mobileLoginHomeCarLoan"/>
+                    <exclude name="mobile.*"/>
                 </methods>
             </class>
         </classes>
