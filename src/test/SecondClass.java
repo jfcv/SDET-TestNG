@@ -10,7 +10,7 @@ public class SecondClass {
         System.out.println("I will execute first");
     }
 
-    @Test
+    @Test(groups={"Smoke"})
     public void thirdTest() {
         System.out.println("third test in a different class");
     }

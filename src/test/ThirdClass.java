@@ -34,7 +34,7 @@ public class ThirdClass {
         System.out.println("webLoginHome");
     }
 
-    @Test
+    @Test(groups={"Smoke"})
     public void mobileLoginHomeCarLoan() {
         System.out.println("mobileLoginHome");
     }
@@ -49,7 +49,7 @@ public class ThirdClass {
         System.out.println("mobileSignOut");
     }
 
-    @Test
+    @Test(groups={"Smoke"})
     public void apiLoginHomeCarLoan() {
         System.out.println("apiLoginHome");
     }
