@@ -29,7 +29,7 @@ public class ThirdClass {
         System.out.println("after executing all the methods on the class");
     }
 
-    @Test
+    @Test(timeOut = 4000)
     public void webLoginHomeCarLoan() {
         System.out.println("webLoginHome");
     }
