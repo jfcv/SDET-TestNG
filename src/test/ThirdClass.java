@@ -1,9 +1,6 @@
 package test;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 public class ThirdClass {
 
@@ -20,6 +17,16 @@ public class ThirdClass {
     @AfterMethod
     public void afterMethod() {
         System.out.println("I will execute after every test method in ThirdClass.java");
+    }
+
+    @BeforeClass
+    public void beforeClass() {
+        System.out.println("before executing all the methods on the class");
+    }
+
+    @AfterClass
+    public void afterClass() {
+        System.out.println("after executing all the methods on the class");
     }
 
     @Test
