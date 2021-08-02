@@ -34,17 +34,17 @@ public class ThirdClass {
         System.out.println("webLoginHome");
     }
 
-    @Test(groups={"Smoke"})
+    @Test(groups={"Smoke"}, dependsOnMethods = {"webLoginHomeCarLoan"})
     public void mobileLoginHomeCarLoan() {
         System.out.println("mobileLoginHome");
     }
 
-    @Test
+    @Test(enabled = false)
     public void mobileSignInHomeCarLoan() {
         System.out.println("mobileSignIn");
     }
 
-    @Test
+    @Test(dependsOnMethods = {"mobileLoginHomeCarLoan"})
     public void mobileSignOutHomeCarLoan() {
         System.out.println("mobileSignOut");
     }
