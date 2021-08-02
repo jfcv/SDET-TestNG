@@ -29,9 +29,10 @@ public class ThirdClass {
         System.out.println("after executing all the methods on the class");
     }
 
+    @Parameters({"URL"})
     @Test(timeOut = 4000)
-    public void webLoginHomeCarLoan() {
-        System.out.println("webLoginHome");
+    public void webLoginHomeCarLoan(String url) {
+        System.out.println("webLoginHome with the following url: " + url);
     }
 
     @Test(groups={"Smoke"}, dependsOnMethods = {"webLoginHomeCarLoan"})
