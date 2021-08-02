@@ -49,7 +49,7 @@ public class ThirdClass {
         System.out.println("mobileSignOut");
     }
 
-    @Test(groups={"Smoke"})
+    @Test(groups={"Smoke"}, dependsOnMethods = {"webLoginHomeCarLoan"})
     public void apiLoginHomeCarLoan() {
         System.out.println("apiLoginHome");
     }
