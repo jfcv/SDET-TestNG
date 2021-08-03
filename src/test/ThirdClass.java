@@ -29,10 +29,10 @@ public class ThirdClass {
         System.out.println("after executing all the methods on the class");
     }
 
-    @Parameters({"URL"})
+    @Parameters({"URL", "APIKey"})
     @Test(timeOut = 4000)
-    public void webLoginHomeCarLoan(String url) {
-        System.out.println("webLoginHome with the following url: " + url);
+    public void webLoginHomeCarLoan(String url, String apiKey) {
+        System.out.println("webLoginHome with the following url: " + url + " and the following API Key: " + apiKey);
     }
 
     @Test(groups={"Smoke"}, dependsOnMethods = {"webLoginHomeCarLoan"})
@@ -53,5 +53,39 @@ public class ThirdClass {
     @Test(groups={"Smoke"}, dependsOnMethods = {"webLoginHomeCarLoan"})
     public void apiLoginHomeCarLoan() {
         System.out.println("apiLoginHome");
+    }
+
+    /*
+     * no matter how many arguments are in the data provider
+     * when processing the information it receives just the two
+     * of the parameters at each row
+     */
+    @Test(dependsOnMethods = {"mobileSignOutHomeCarLoan"}, dataProvider = "getData")
+    public void dataProvidersTest(String username, String password) {
+        System.out.println("the username is : " + username + " and the password is : " + password);
+    }
+
+    @DataProvider
+    public Object[][] getData(){
+        /*
+         * Object[# combinations][# values]
+         */
+        Object[][] data = new Object[3][2];
+        /*
+         * 1st set
+         */
+        data[0][0] = "firstUsername";
+        data[0][1] = "firstPassword";
+        /*
+         * 2nd set
+         */
+        data[1][0] = "secondUsername";
+        data[1][1] = "secondPassword";
+        /*
+         * 3rd set
+         */
+        data[2][0] = "thirdUsername";
+        data[2][1] = "thirdPassword";
+        return data;
     }
 }

@@ -3,6 +3,7 @@
 <suite name="Loan Department">
     
     <parameter name="URL" value="qaclickacademy.com"/>
+    <parameter name="APIKey" value="123456"></parameter>
 
     <test name="Regression">
         <classes>
