@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class ThirdClass {
@@ -63,6 +64,11 @@ public class ThirdClass {
     @Test(dependsOnMethods = {"mobileSignOutHomeCarLoan"}, dataProvider = "getData")
     public void dataProvidersTest(String username, String password) {
         System.out.println("the username is : " + username + " and the password is : " + password);
+    }
+
+    @Test(dependsOnMethods = {"dataProvidersTest"})
+    public void onTestFailedListenersTest() {
+        Assert.assertTrue(false);
     }
 
     @DataProvider

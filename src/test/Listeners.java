@@ -21,6 +21,7 @@ public class Listeners implements ITestListener {
          * screenshot code
          * response if the [API, mobile] failed
          */
+        System.out.println("the following test case is failing: " + result.getName());
     }
 
     @Override
